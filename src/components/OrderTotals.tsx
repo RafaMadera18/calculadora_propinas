@@ -37,7 +37,8 @@ export default function OrderTotals({order, setOrder, tip} : OrderTotalsProps) {
 
         <button
             onClick={deleteOrder}
-            className="w-full bg-teal-300 hover:bg-teal-200 rounded-md text-lg py-3 font-black"
+            disabled={totalAmount === 0}
+            className="w-full bg-teal-300 hover:bg-teal-200 rounded-md text-lg py-3 font-black disabled:opacity-10"
         >
             Vaciar Orden
         </button>
